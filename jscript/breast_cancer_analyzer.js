@@ -74,6 +74,7 @@ function breast_delay() {
 	return new Promise(resolve => setTimeout(resolve, 200));
 }
 
+
 async function breast_delayedLog(item, dataURL) {
 	
 	// We can await a function that returns a promise.
@@ -96,6 +97,7 @@ async function breast_processArray(array) {
 	
 	for(var item of fileList) {
 		
+		
 		let reader = new FileReader();
 		
 		// clear the previous variable from memory.
@@ -106,7 +108,9 @@ async function breast_processArray(array) {
 			
 			let dataURL = reader.result;
 			
-			await breast_delayedLog(item, dataURL);	
+			await breast_delayedLog(item, dataURL);
+			
+			
 			
 			var fname = file.name;
 			
@@ -126,3 +130,4 @@ async function breast_processArray(array) {
 	}
 }
 
+ 
